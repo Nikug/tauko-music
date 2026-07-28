@@ -4,8 +4,10 @@
 </script>
 
 <div class="px-8 py-12">
-  <h1 class="text-3xl font-bold">Tauko</h1>
-  <p class="mb-4 text-gray-400">Chill and melodic bass music</p>
+  <div class="w-min rounded bg-gray-300 px-4 pb-1">
+    <h1 class="text-6xl font-extrabold text-gray-900 uppercase">Tauko</h1>
+  </div>
+  <p class="mb-4 font-semibold text-gray-400">Chill and melodic bass music</p>
   <p>Feel free to contact me if you want to</p>
   <p class="mb-8">Contact: <a href="mailto:taukomusic@gmail.com">taukomusic@gmail.com</a></p>
 
