@@ -1,2 +1,15 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/typography';
+
+@theme {}
+
+@layer components {
+  * {
+    @apply border-gray-600;
+    @apply text-gray-300;
+  }
+
+  a {
+    @apply text-blue-500 hover:text-blue-600;
+  }
+}
