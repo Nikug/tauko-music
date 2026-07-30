@@ -1,4 +1,5 @@
 <script lang="ts">
+  import EmailButton from '$lib/components/EmailButton.svelte';
   import { releases } from '$lib/releases';
   const orderedReleases = releases.sort((a, b) => b.date.getTime() - a.date.getTime());
 </script>
@@ -9,7 +10,11 @@
   </div>
   <p class="mb-4 font-semibold text-gray-400">Chill and melodic bass music</p>
   <p>Feel free to contact me if you want to</p>
-  <p class="mb-8">Contact: <a href="mailto:taukomusic@gmail.com">taukomusic@gmail.com</a></p>
+
+  <div class="mb-8 flex gap-2">
+    <p>Contact:</p>
+    <EmailButton />
+  </div>
 
   <h2 class="mb-2 text-2xl font-bold">Releases</h2>
   <div class="flex flex-wrap gap-4">
