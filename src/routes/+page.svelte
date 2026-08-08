@@ -1,5 +1,6 @@
 <script lang="ts">
   import EmailButton from '$lib/components/EmailButton.svelte';
+  import ReleaseCard from '$lib/components/ReleaseCard.svelte';
   import { releases } from '$lib/releases';
   const orderedReleases = releases.sort((a, b) => b.date.getTime() - a.date.getTime());
 </script>
@@ -18,14 +19,8 @@
 
   <h2 class="mb-2 text-2xl font-bold">Releases</h2>
   <div class="flex flex-wrap gap-4">
-    {#each orderedReleases as release}
-      <div
-        class="min-w-64 shrink rounded border bg-gray-800 px-4 py-2 shadow-blue-800/50 transition-shadow hover:shadow-lg"
-      >
-        <h3 class="text-xl font-bold">{release.name}</h3>
-        <p class="text-gray-400">{release.date.toLocaleDateString()}</p>
-        <a href={release.link} class="text-blue-500 underline">Listen on all platforms</a>
-      </div>
+    {#each orderedReleases as release (release.link)}
+      <ReleaseCard {release} />
     {/each}
   </div>
 </div>
